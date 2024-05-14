@@ -8,6 +8,7 @@ export default function CreateInventory() {
     medication_id: '',
     category: '',
     name: '',
+    supplier_name: '',
     quantity: '',
     last_restocked: '',
   });
@@ -45,6 +46,7 @@ export default function CreateInventory() {
         medication_id: '',
         category: '',
         name: '',
+        supplier_name: '',
         quantity: '',
         last_restocked: '',
       });
@@ -77,6 +79,7 @@ export default function CreateInventory() {
                 <input type='text' name='name' placeholder='Name' value={formData.name} onChange={handleChange} required />
                ))
             }
+            <input type="text" name="supplier_name" placeholder='supplier name' value={formData.supplier_name} onChange={handleChange} />
             {/* <select name="medication_id" value={formData.medication_id} onChange={handleChange} required>
               <option value="">Select Medication</option>
               {medications.map((medication) => (

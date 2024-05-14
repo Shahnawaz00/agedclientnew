@@ -10,6 +10,7 @@ export default function InventoryList() {
 
   useEffect(() => {
     fetchInventory();
+    fetchMedications();
   }, []);
 
   const fetchInventory = async () => {
@@ -55,6 +56,7 @@ export default function InventoryList() {
                 <th>Inventory ID</th>
                 <th>Category</th>
                 <th>Name</th>
+                <th>Supplier Name</th>
                 <th>Quantity</th>
                 <th>Last Restocked</th>
                 {/* <th>Delete</th> */}
@@ -69,6 +71,7 @@ export default function InventoryList() {
                   <td>{item.inventory_id}</td>
                   <td>{item.category}</td>
                   <td>{item.medication_id ? getMedicationName(item.medication_id): item.name}</td>
+                  <td>{item.supplier_name}</td>
                   <td>{item.quantity}</td>
                   <td>{formatDate(item.last_restocked)}</td>
                   {/* <td>
